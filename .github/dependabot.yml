@@ -1,0 +1,17 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "maven"   # 指定使用 Maven 作为包管理工具
+    directory: "/"               # 项目根目录（根据实际情况调整路径）
+    schedule:
+      interval: "weekly"         # 每周检查依赖更新（可选 daily, weekly, monthly）
+    open-pull-requests-limit: 5  # 同时打开的 PR 数量限制
+    reviewers:                   # 可选，添加审查人员
+      - your-github-username
+    labels:                      # 可选，为 PR 添加标签
+      - "dependencies"
+      - "automated"
